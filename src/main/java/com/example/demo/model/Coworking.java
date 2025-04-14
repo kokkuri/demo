@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,6 +22,6 @@ public class Coworking {
     String address;
     String description;
     Integer capacity;
-    @OneToMany(mappedBy ="coworkings")
+    @OneToMany(mappedBy ="coworking")
     Set<Room> rooms;
 }

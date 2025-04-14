@@ -1,7 +1,6 @@
 package com.example.demo.model.enums;
 
-public enum Status {
+public enum PaymentStatus {
     PENDING,
-    CONFIRMED,
-    CANCELLED
+    COMPLETED
 }

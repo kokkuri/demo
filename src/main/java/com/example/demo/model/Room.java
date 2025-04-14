@@ -3,6 +3,8 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "rooms")
 @Getter
@@ -32,4 +34,7 @@ public class Room {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Coworking coworking;
+
+    @OneToMany(mappedBy = "room")
+    private List<Booking> bookings;
 }
